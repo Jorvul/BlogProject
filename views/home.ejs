@@ -1,0 +1,10 @@
+
+<%- include("partials/header"); -%>
+
+    <h1>Home</h1>
+    <p><%=homeContent%></p>
+    <% for(let i = 0; i < newPostList.length;i++) { %>
+        <%console.log(newPostList[i].title)%>
+        <% } %>
+
+<%- include("partials/footer"); -%>
