@@ -3,8 +3,11 @@
 
     <h1>Home</h1>
     <p><%=homeContent%></p>
-    <% for(let i = 0; i < newPostList.length;i++) { %>
-        <%console.log(newPostList[i].title)%>
-        <% } %>
+    <% newPostList.forEach(function(ele){ %>
+        <h1><%=ele.title%></h1>
+        <p><%=ele.content%></p>
+        <%})%>
+
+
 
 <%- include("partials/footer"); -%>
