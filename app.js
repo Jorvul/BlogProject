@@ -38,12 +38,23 @@ const post = {
   content: req.body.postBody
 
   };
+
   posts.push(post);
   res.redirect("/")
 
 });
 
+app.get("/posts/:categories",function(req,res){
+  let postName = req.params.categories;
 
+for(let i =0; i < posts.length;i++){
+  if(posts[i].title === postName)
+  console.log("Match Found");
+
+}
+
+
+})
 
 
 
