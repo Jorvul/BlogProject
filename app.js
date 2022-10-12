@@ -49,15 +49,19 @@ app.get("/posts/:categories",function(req,res){
 
 for(let i =0; i < posts.length;i++){
   if(posts[i].title === postName)
-  console.log("Match Found");
+  res.render("post",{title: posts[i].title,
+    content: posts[i].content
+  })
 
 }
 
 
+
 })
 
-
-
+app.get("/post",function(req,res){
+  res.render("post");
+})
 
 
 
